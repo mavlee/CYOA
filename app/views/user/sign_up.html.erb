@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Twitter Clone</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= form_for @user do |form| %>
+	<% if @user.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@user.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+			<ul>
+				<% @user.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<%= form.text_field :full_name, :placeholder => "Full name", :value => @user.full_name %>
+	
+	<script type="text/javascript">
+		document.forms['new_user'].elements['user_full_name'].focus();
+	
+		var full_name_validation = new LiveValidation("user_full_name", {validMessage: " Name looks great."});
+		full_name_validation.add(Validate.Presence, {failureMessage: " Enter your first and last name."});
+	</script>
+	
+	</br>
+	<%= form.text_field :email, :placeholder => "Email" %>
+	
+	<script type="text/javascript">
+		var email_validation = new LiveValidation("user_email", {validMessage: " We will email you a confirmation."});
+		email_validation.add(Validate.Presence, {failureMessage: " Enter your email."});
+	</script>
+	
+	</br>
+	<%= form.text_field :pw, :placeholder => "Password" %>
+	
+	<script type="text/javascript">
+		var pw_validation = new LiveValidation("user_pw", {validMessage: " Your password is great!"});
+		pw_validation.add(Validate.Presence, {failureMessage: " 6 characters or more. Be tricky!"});
+	</script>
+	
+	</br>
+	<%= form.text_field :username, :placeholder => "Username" %>
+	
+	<script type="text/javascript">
+		var username_validation = new LiveValidation("user_username", {validMessage: " Username is available."});
+		username_validation.add(Validate.Presence, {failureMessage: " Don't worry, you can change it later"});
+	</script>
+	
+	</br>
+	<%= form.submit "Create my account" %>
+<% end %>
+
+</body>
+</html>
