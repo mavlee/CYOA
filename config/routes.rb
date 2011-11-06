@@ -56,7 +56,7 @@ TwitterClone::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
   root :to => "frontpage#frontpage"
-  resources :users
+  resources :users, controller:"user"
   match "frontpage" => "frontpage#frontpage"
   match "sign_up" => "user#sign_up"
   match "show" => "user#show"
