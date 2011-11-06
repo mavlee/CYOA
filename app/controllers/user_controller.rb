@@ -1,4 +1,4 @@
-class UserController < ActionController::Base
+class UserController < ApplicationController
   
   def sign_up
     @user = User.new(params[:user])
@@ -27,4 +27,7 @@ class UserController < ActionController::Base
     end
   end
   
+  def full_name
+    
+  end
 end

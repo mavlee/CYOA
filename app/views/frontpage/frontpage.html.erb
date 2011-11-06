@@ -3,12 +3,12 @@
 		<section id="grid-system">
 			<div class="row">
 				<div class="span10">
-					Hello
+					&nbsp;
 				</div>
 				<div class="span6">
 					</br>
 					<%= form_for @user do |form| %>
-						<%= form.text_field :username, :placeholder => "Username", :autocomplete => "on", :width => "117px" %>
+						<%= form.text_field :username, :placeholder => "Username", :autocomplete => "on" %>
 						<%= form.text_field :pw, :placeholder => "Password" %>
 						<%= form.submit "Sign in" %>
 					<% end %>
@@ -24,6 +24,8 @@
 						<%= form.text_field :email, :placeholder => "Email" %>
 						</br>
 						<%= form.text_field :pw, :placeholder => "Password" %>
+						</br>
+						<%= form.text_field :username, :placeholder => "Username" %>
 						</br>
 						<%= form.submit "Sign up" %>
 					<% end %>
