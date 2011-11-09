@@ -1,6 +1,8 @@
 class UserController < ApplicationController
   
   def sign_up
+    @title = "Sign Up"
+    
     @user = User.new(params[:user])
   end
   

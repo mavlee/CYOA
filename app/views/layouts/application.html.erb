@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Twitter</title>
+  <title><%= setTitleBasedOnPage %></title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -17,7 +17,7 @@
 <div class="topbar" data-scrollspy="scrollspy">
 	<div class="topbar-inner">
 			<div class="container">
-				<a class="brand" href="#">Twitter</a>
+				<a class="brand" href=<%= root_path %>>Twitter</a>
 				<ul class="nav">
 				<li class="active"><a href="#overview">Overview</a></li>
 				<li><a href="#about">About</a></li>
