@@ -14,30 +14,18 @@
 </head>
 <body>
 
-<div class="topbar" data-scrollspy="scrollspy">
-	<div class="topbar-inner">
-			<div class="container">
-				<a class="brand" href=<%= root_path %>>Twitter</a>
-				<ul class="nav">
-				<li class="active"><a href="#overview">Overview</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#grid-system">Grid</a></li>
-				<li><a href="#layouts">Layouts</a></li>
-				<li><a href="#typography">Type</a></li>
-				<li><a href="#media">Media</a></li>
-				<li><a href="#tables">Tables</a></li>
-				<li><a href="#forms">Forms</a></li>
-				<li><a href="#navigation">Navigation</a></li>
-				<li><a href="#alerts">Alerts</a></li>
-				<li><a href="#popovers">Popovers</a></li>
-				<li><a href="#javascript">Javascript</a></li>
-				<li><a href="#less">Less</a></li>
-			</ul>
-		</div>
+<div class="container">
+	
+	<%= debug(params) if Rails.env.development? %>
+	
+	<div class="content">
+		<section id="grid-system">
+			<div class="row">
+				<%= yield %>
+			</div>
+		</section>
 	</div>
 </div>
-
-<%= yield %>
-
+		
 </body>
 </html>

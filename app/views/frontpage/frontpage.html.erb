@@ -1,41 +1,37 @@
-<div class="container">
-	<div class="content">
-		<section id="grid-system">
-			<div class="row">
-				<div class="span10">
-					&nbsp;
-				</div>
-				<div class="span6">
-					</br>
-					<%= form_for @user do |form| %>
-						<%= form.text_field :username, :placeholder => "Username", :autocomplete => "on" %>
-						<%= form.text_field :pw, :placeholder => "Password" %>
-						<%= form.submit "Sign in" %>
-					<% end %>
-
-					</br>
-					New to Twitter? Join Today!
-					</br>
-					</br>
-
-					<%= form_for @user, :url =>"sign_up" do |form| %>
-						<%= form.text_field :full_name, :placeholder => "Full name" %>
-						</br>
-						<%= form.text_field :email, :placeholder => "Email" %>
-						</br>
-						<%= form.text_field :pw, :placeholder => "Password" %>
-						</br>
-						<%= form.text_field :username, :placeholder => "Username" %>
-						</br>
-						<%= form.submit "Sign up" %>
-					<% end %>
-				</div>
-			</div>
-		</section>
-	</div>
-
-<footer>
-</footer>
-
+<div class="span10">
+	&nbsp;
 </div>
+
+<div class="span6">
+	<div class="frontpage_right_div">
+		</br>
+		
+		<%= form_for @user, :url =>"user_home" do |form| %>
+			<%= form.text_field :username, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
+			<%= form.text_field :pw, :class => "small", :placeholder => "Password" %>
+			<%= form.submit "Sign in", :class => "frontpage_submit_button" %>
+		<% end %>
+
+		New to Twitter? Join Today!
+		</br>
+		</br>
+
+		<%= form_for @user, :url =>"sign_up" do |form| %>
+			<%= form.text_field :full_name, :class => "frontpage_large_textfield", :placeholder => "Full name" %>
+			</br>
+			</br>
+			<%= form.text_field :email, :class => "frontpage_large_textfield", :placeholder => "Email" %>
+			</br>
+			</br>
+			<%= form.text_field :pw, :class => "frontpage_large_textfield", :placeholder => "Password", size: "50"; %>
+			</br>
+			</br>
+			<%= form.text_field :username, :class => "frontpage_large_textfield", :placeholder => "Username" %>
+			</br>
+			</br>
+			<%= form.submit "Sign up", :class => "frontpage_submit_button" %>
+		<% end %>
+	</div>
+</div>
+
 
