@@ -9,7 +9,7 @@ describe User do
     User.create!(@user)
   end
   
-  # name
+  # NAME RELATED **************************************************************************************************************************
   it "should require a name" do
     no_name_user = User.new(@user.merge(:full_name => ""))
     no_name_user.should_not be_valid
@@ -59,18 +59,18 @@ describe User do
     user_with_duplicate_email.should_not be_valid
   end
 
-  # username 
+  # USERNAME RELATED **********************************************************************************************************************
   it "should require a username" do
     no_username_user = User.new(@user.merge(:username => ""))
     no_username_user.should_not be_valid
   end
   
-  # pw
+  # PW RELATED **************************************************************************************************************************** 
   it "should require a pw" do
     no_pw_user = User.new(@user.merge(:pw => ""))
     no_pw_user.should_not be_valid
   end
-
+  
   it "should reject short passwords" do
     short_pw_user = User.new(@user.merge(:pw => "a" * 5))
     short_pw_user.should_not be_valid
@@ -82,13 +82,10 @@ describe User do
   end
   
   describe "password encryption" do
-    before(:each) do
-      @user = User.create!(@attr)
-    end
-    
     it "should have an encrypted password attribute" do
-      @user.should respond_to(:pw)
+      user= User.new(@user)
+      user.should respond_to(:encrypted_pw)
     end
   end
-  
+
 end

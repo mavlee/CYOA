@@ -26,7 +26,6 @@ class User < ActiveRecord::Base
     :presence => true, 
     :length => { :minimum => 6, :maximum => 40 }
                   
-  
   before_save :encrypt_pw
   
   def matches_pw?(submitted_pw)
