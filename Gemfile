@@ -40,6 +40,7 @@ group :test do
   	gem 'turn', :require => false
 	gem 'rspec-rails', '2.7.0'
 	gem 'webrat', '0.7.1'
+	gem 'factory_girl_rails', '1.0'
 end
 
 gem 'devise', '~> 1.4.3'

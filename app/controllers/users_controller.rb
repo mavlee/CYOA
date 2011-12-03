@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.new(params[:user])
+    @user = User.find(params[:user])
   end
   
   def show_all
