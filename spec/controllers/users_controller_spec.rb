@@ -6,7 +6,8 @@ describe UsersController do
   describe "GET 'show'" do
     before(:each) do
       @user = Factory(:user)
-      User.create!(@user)
+      # @attr = { :full_name => "Example User", :email => "user@example.com", :username => "Example User", :pw => "Example" }
+      # @user = User.create!(@attr)
     end
     
     it "should be successful" do
