@@ -22,6 +22,10 @@ describe UsersController do
       # or a.k.a. assigns(:user) returns the value of the instance variable @user in the show action of the Users controller
       assigns(:user).should == @user
     end
+    
+    it "should have the right title" do
+      
+    end
   end
 
   describe "GET 'sign_up'" do
