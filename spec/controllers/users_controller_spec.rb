@@ -24,6 +24,7 @@ describe UsersController do
     end
     
     it "should have the right title" do
+      get :show, :id => @user.id
       
     end
   end
