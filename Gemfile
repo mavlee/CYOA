@@ -30,6 +30,10 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+group :production do
+	gem 'pg'
+end
+
 group :development do
   gem 'rspec-rails', '2.7.0'
   gem 'annotate', '2.4.0'
