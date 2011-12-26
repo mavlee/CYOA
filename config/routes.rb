@@ -62,5 +62,6 @@ TwitterClone::Application.routes.draw do
   match "show" => "users#show"
   match "show_all" => "users#show_all"
   match "dashboard" => "users#dashboard"
-  match "user_home" => "users#user_home"
+  match "home" => "users#home"
+  match "user_create" => "users#create"
 end

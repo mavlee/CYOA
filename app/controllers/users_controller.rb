@@ -7,12 +7,16 @@ class UsersController < ApplicationController
   end
   
   # POST /user
-  def create
+  def create    
     @user = User.new(params[:user])
+    @title = @user.username
 
     respond_to do |format|
       if @user.save
-        format.html {render action: "show"}
+        flash[:success] = "Welcome to the Sample App!"
+        format.html {render action: "home"}
+      else
+        format.html {render action: "sign_up"}
       end
     end
   end
@@ -33,10 +37,8 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
   end
   
-  def user_home
+  def home
     @user = User.new(params[:user])
-    
-    @user.save
   end  
   
 end

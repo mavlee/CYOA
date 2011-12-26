@@ -6,7 +6,7 @@
 	<div class="frontpage_right_div">
 		</br>
 		
-		<%= form_for @user, :url =>"user_home" do |form| %>
+		<%= form_for @user, :url =>"home" do |form| %>
 			<%= form.text_field :username, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
 			<%= form.text_field :pw, :class => "small", :placeholder => "Password" %>
 			<%= form.submit "Sign in", :class => "frontpage_submit_button" %>
@@ -23,7 +23,7 @@
 			<%= form.text_field :email, :class => "frontpage_large_textfield", :placeholder => "Email" %>
 			</br>
 			</br>
-			<%= form.text_field :pw, :class => "frontpage_large_textfield", :placeholder => "Password", size: "50"; %>
+			<%= form.password_field :pw, :class => "frontpage_large_textfield", :placeholder => "Password", size: "50"; %>
 			</br>
 			</br>
 			<%= form.text_field :username, :class => "frontpage_large_textfield", :placeholder => "Username" %>
