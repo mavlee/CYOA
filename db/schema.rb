@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120107084758) do
+ActiveRecord::Schema.define(:version => 20120107194259) do
 
   create_table "relationships", :force => true do |t|
     t.integer  "story_id",   :null => false
@@ -34,18 +34,5 @@ ActiveRecord::Schema.define(:version => 20120107084758) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "users", :force => true do |t|
-    t.string   "full_name"
-    t.string   "email"
-    t.string   "username"
-    t.string   "pw"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "encrypted_pw"
-    t.string   "salt"
-  end
-
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end
