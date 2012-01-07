@@ -1,6 +1,6 @@
 module ApplicationHelper
   def setTitleBasedOnPage
-    base_title = "Twitter"
+    base_title = "CYOA"
     
     if @title.nil?
       base_title

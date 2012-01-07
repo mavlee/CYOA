@@ -15,3 +15,63 @@ REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
 REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
 REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
 REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"Example User", "email"=>"user@example.com", "pw"=>"foobar", "username"=>"foobar"}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}
+REQUESTING PAGE: GET /sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST user_create with {"utf8"=>"✓", "user"=>{"full_name"=>"", "email"=>"", "pw"=>"", "username"=>""}, "commit"=>"Create my account"} and HTTP headers {"HTTP_REFERER"=>"/sign_up"}

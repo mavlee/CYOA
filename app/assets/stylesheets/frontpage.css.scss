@@ -5,12 +5,22 @@ div.frontpage_right_div {
 	width: 264px
 }
 
+div.frontpage_left_div {
+	width: 385px;
+}
+
 input.frontpage_submit_button {
 	width: 54px;
 	float: right;
 }
 
+input.frontpage_create_new_story_button {
+	width: 120px;
+	float: right;
+}
+
 input.frontpage_large_textfield {
-	width: 254px
+	width: 254px;
+	float: left;
 }
 

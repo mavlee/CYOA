@@ -1,4 +1,6 @@
 TwitterClone::Application.routes.draw do
+  get "sessions/new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -55,10 +57,19 @@ TwitterClone::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
-  root :to => "frontpage#frontpage"
+  resources :stories, controller: "stories"
   resources :users, controller: "user"
+  resources :sessions, :only => [:new, 
+                                 :create, # url = /sessions, named route = sessions_path, action = create, purpose = create a new session 
+                                 :destroy]
+  
+  root :to => "frontpage#frontpage"
   match "frontpage" => "frontpage#frontpage"
+  
   match "sign_up" => "users#sign_up"
+  match "sign_in" => "sessions#new"
+  match "sign_out" => "sessions#destroy"
+  
   match "show" => "users#show"
   match "show_all" => "users#show_all"
   match "dashboard" => "users#dashboard"

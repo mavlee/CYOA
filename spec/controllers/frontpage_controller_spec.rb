@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe FrontpageController do
-  render_views # render the views inside the controller tests, so not just test the actions
+  render_views # render the views inside the controller tests so can test views as well
 
   describe "GET 'frontpage'" do
     it "should be successful" do
