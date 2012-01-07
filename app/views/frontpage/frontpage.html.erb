@@ -12,7 +12,7 @@
 		
 		<% @stories.each do |story| %>
 		  <tr> 
-			<td><%= story.title %></td> <%= link_to "View", "stories/" + story.id.to_s + "/view" %> <%= link_to "Edit", story %>
+			<td><%= story.title %></td> <%= link_to "View", "story/" + story.id.to_s + "/view" %> <%= link_to "Edit", story %>
 		  </tr>
 		  </br>
 		<% end %>

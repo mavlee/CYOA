@@ -1,2 +1,2 @@
-class StoryPath < ActiveRecord::Base
+class Storypath < ActiveRecord::Base
 end

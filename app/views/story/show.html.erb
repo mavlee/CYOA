@@ -1,0 +1,22 @@
+<%= render 'layouts/topbar' %>
+
+<p>
+  	<b>Title:</b>
+  	<%= @story.title %>
+  	</br>
+  	<b>Content:</b>
+  	<%= @story.content %>
+
+	<%= form_for @story, :url => story_path do |form| %>
+		<%= form.text_area :content, :class => "story_text_area", :placeholder => @story.content %>
+		</br>
+		<%= form.submit "Save" %>
+	<% end %>
+	
+	<b>Paths:</b>
+	</br>
+	<%= form_for @storypath, :url => story_path do |form| %>
+		<%= form.text_field :title, :class => "frontpage_large_textfield", :placeholder => "Story Name" %>
+		<%= form.submit "Create new path" %>
+	<% end %>
+</p>
