@@ -12,7 +12,7 @@
 		
 		<% @stories.each do |story| %>
 		  <tr> 
-			<%= story.id %> <td><%= story.title %></td> <%= link_to "View", story %> <%= link_to "Edit", story %>
+			<td><%= story.title %></td> <%= link_to "View", "stories/" + story.id.to_s + "/view" %> <%= link_to "Edit", story %>
 		  </tr>
 		  </br>
 		<% end %>
@@ -22,7 +22,6 @@
 <div class="span6">
 	<div class="frontpage_right_div">
 		</br>
-		
 		<%= form_for(:session, :url => sessions_path) do |form| %>
 			<%= form.text_field :username, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
 			<%= form.text_field :pw, :class => "small", :placeholder => "Password" %>

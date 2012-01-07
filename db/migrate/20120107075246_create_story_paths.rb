@@ -1,9 +1,9 @@
-class CreateStories < ActiveRecord::Migration
+class CreateStoryPaths < ActiveRecord::Migration
   def change
-    create_table :stories do |t|
+    create_table :story_paths do |t|
       t.string :title, :null => false
       t.string :content, :null => false
-
+      
       t.timestamps
     end
   end

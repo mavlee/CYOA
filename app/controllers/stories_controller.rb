@@ -7,9 +7,13 @@ class StoriesController < ApplicationController
     end
   end
   
+  def view
+    @story = Story.find(params[:id])
+  end
   
   def show
     @story = Story.find(params[:id])
+    @storypath = StoryPath.new
   end
   
   def update
