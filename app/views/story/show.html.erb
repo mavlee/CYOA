@@ -5,10 +5,10 @@
   	<%= @story.title %>
   	</br>
   	<b>Content:</b>
-  	<%= @story.content %>
+  	<%= @story.description %>
 
 	<%= form_for @story, :url => story_path do |form| %>
-		<%= form.text_area :content, :class => "story_text_area", :placeholder => @story.content %>
+		<%= form.text_area :description, :class => "story_text_area", :placeholder => @story.description %>
 		</br>
 		<%= form.submit "Save" %>
 	<% end %>
