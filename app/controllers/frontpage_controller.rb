@@ -3,14 +3,15 @@ class FrontpageController < ApplicationController
     @title = "Home"
     @user = User.new
     @sign_up = User.new
-    @story = Story.new
-    
     @story = Story.new(params[:story])
 
     respond_to do |format|
-      if @story.save
+      if @story.title.nil?
         @stories = Story.all
-        flash[:success] = "Welcome to the Sample App!"
+        format.html 
+      elsif @story.save
+        flash.now[:success] = "Story was successfully created."
+        @stories = Story.all
         format.html 
         # redirect_to root_path
         # redirect_to :controller => "frontpage", :action => "frontpage"

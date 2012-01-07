@@ -1,3 +1,5 @@
+<%= render 'layouts/topbar' %>
+
 <div class="span10">
 	<div class="frontpage_left_div">
 		<%= form_for @story, :url => root_path do |form| %>
@@ -9,8 +11,8 @@
 		</br>
 		
 		<% @stories.each do |story| %>
-		  <tr>
-		    <td><%= link_to story.title, story_path(@story) %></td>
+		  <tr> 
+			<%= story.id %> <td><%= story.title %></td> <%= link_to "View", story %> <%= link_to "Edit", story %>
 		  </tr>
 		  </br>
 		<% end %>
