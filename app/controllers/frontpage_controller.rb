@@ -1,8 +1,8 @@
 class FrontpageController < ApplicationController
   def frontpage
     @title = "Home"
-    @user = User.new
-    @sign_up = User.new
+    #@user = User.new
+    #@sign_up = User.new
     @story = Story.new(params[:story])
 
     respond_to do |format|
