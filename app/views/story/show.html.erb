@@ -15,7 +15,7 @@
 	
 	<b>Paths:</b>
 	</br>
-	<%= form_for @storypath, :url => storypath_path do |form| %>
+	<%= form_for @storypath do |form| %>
 		<%= form.text_field :title, :class => "frontpage_large_textfield", :placeholder => "Story Name" %>
 		<%= form.submit "Create new path" %>
 	<% end %>
