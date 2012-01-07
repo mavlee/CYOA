@@ -11,22 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120107204648) do
-
-  create_table "relationships", :force => true do |t|
-    t.integer  "story_id",   :null => false
-    t.string   "transition", :null => false
-    t.integer  "path_id",    :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20120107214428) do
 
   create_table "stories", :force => true do |t|
     t.string   "title"
     t.string   "description"
+    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "category"
+  end
+
+  create_table "story_branches", :force => true do |t|
+    t.integer  "from_node"
+    t.integer  "to_node"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "story_nodes", :force => true do |t|
+    t.string   "title"
+    t.string   "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "story_paths", :force => true do |t|
+    t.string   "title",      :null => false
+    t.string   "content",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "storypaths", :force => true do |t|
