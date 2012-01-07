@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120107194259) do
+ActiveRecord::Schema.define(:version => 20120107204648) do
 
   create_table "relationships", :force => true do |t|
     t.integer  "story_id",   :null => false
@@ -23,9 +23,10 @@ ActiveRecord::Schema.define(:version => 20120107194259) do
 
   create_table "stories", :force => true do |t|
     t.string   "title"
-    t.string   "content"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "category"
   end
 
   create_table "storypaths", :force => true do |t|
