@@ -6,6 +6,17 @@
     
   	<%= @story_node.content %>
     <br />
+    <br />
 
+    <b>Branch List</b>
+    <br />
+    <% if @story_branches %>
+      <% @story_branches.each_with_index do |branch, index| %>
+        <%= link_to @branch_titles[index].title, :action => 'show', :id => branch.to_node %>
+        <br />
+      <% end %>
+    <% end %>
+    <br />
 
+    <%= link_to "New Branch", :action => 'new', :options => {'referer' => @story_node.id} %>
 </p>
