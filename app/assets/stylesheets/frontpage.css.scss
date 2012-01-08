@@ -1,37 +1,39 @@
 // Place all the styles related to the frontpage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.frontpage_right_div {
-	width: 264px
-}
 
-.frontpage_left_div {
-	width: 385px;
-}
-
-input.frontpage_submit_button {
-	width: 54px;
-	float: right;
-}
-
-input.frontpage_create_new_story_button {
-	width: 120px;
-	float: left;
-}
-
-input.frontpage_large_textfield {
-	width: 254px;
-	float: left;
-}
-
-
-#story-list-placeholder {
-  li {
-    margin: 20px 0;
-    list-style: none;
+#frontpage {
+  h1 {
+    display: inline-block;
   }
 
-  .story-title {
-    font-size: 30px;
+  .submit_button {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 40px;
+    height: 40px;
+    width: 200px;
+    float: right;
+    text-shadow: -1px 1px 1px #333333;
+    background-color: #6DFF19;
+    text-align: center;
+    -moz-border-radius: 15px;
+    border-radius: 10px;
+    color: white;
+
+    -moz-box-shadow: 2px 2px 2px #888;
+    -webkit-box-shadow: 2px 2px 2px #888;
+    box-shadow: 2px 2px 2px #888;
+  }
+
+  #story-list-placeholder {
+    li {
+      margin: 20px 0;
+      list-style: none;
+    }
+
+    .story-title {
+      font-size: 30px;
+    }
   }
 }
