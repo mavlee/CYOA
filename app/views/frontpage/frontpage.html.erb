@@ -1,17 +1,16 @@
 <%= render 'templates/story_templates.html' %>
 
-<div class="span10">
-	<div class="frontpage_left_div">
-		<a href="/stories/new"> Create Story </a>
-		</br>
+<div id="frontpage" class="span10">
+  <h1>Stories</h1>
+  <a class="submit_button" href="/stories/new">
+    Create Story
+  </a>
 
-    <h1>Stories</h1>
-    <ul id="story-list-placeholder"></ul>
+  <ul id="story-list-placeholder"></ul>
 
-    <script type="text/javascript">
-      window.BranchItOut.stories = <%= raw @stories.to_json %>;
-    </script>
-	</div>
+  <script type="text/javascript">
+    window.BranchItOut.stories = <%= raw @stories.to_json %>;
+  </script>
 </div>
 
 <%= requirejs_include_tag "home_page" %>
