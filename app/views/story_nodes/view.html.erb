@@ -1,4 +1,10 @@
 <p>
+  <% if @previous_node_branch %>
+    <%= link_to 'back', :action => :show, :id => @previous_node_branch.from_node %>
+  <% else %>
+    <%= link_to 'back', :controller => :stories, :action => :show, :id => @story.id %>
+  <% end %>
+  <br />
   <b>Story Title:</b>
   NOT DONE YET
   <br />

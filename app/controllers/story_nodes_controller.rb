@@ -33,8 +33,12 @@ class StoryNodesController < ApplicationController
   end
 
   def show
+    # A lot of these can be redone
+    # It's 4:30 AM and I can't think of smart schemas
     @story_node = StoryNode.find(params[:id])
     @story_branches = StoryBranch.where(:from_node => @story_node.id)
+    @previous_node_branch = StoryBranch.where(:to_node => @story_node.id)[0]
+    @story = Story.where(:start_node => @story_node.id)[0]
     @branch_titles = StoryNode.all(:select => "title", :conditions => ["id in (?)", @story_branches.collect {|x| x.to_node }])
 
     render 'view'
