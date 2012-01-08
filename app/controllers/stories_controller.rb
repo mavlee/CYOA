@@ -22,21 +22,17 @@ class StoriesController < ApplicationController
     @story = Story.new(params[:story])
     
     @story_node = StoryNode.new
+    @story_node.save
     @story.start_node = @story_node.id
 
-    @story_node.save
     @story.save
 
     redirect_to :controller => 'story_nodes', :action => 'edit', :id => @story_node.id
   end
   
-  def view
-    @story = Story.find(params[:id])
-  end
-  
   def show
-    # @story = Story.find(params[:id])
-   #  @storypath = Storypath.new
+    @story = Story.find(params[:id])
+    render 'show'
   end
   
   def update

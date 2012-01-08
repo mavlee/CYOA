@@ -23,6 +23,8 @@ class StoryNodesController < ApplicationController
 
   def show
     @story_node = StoryNode.find(params[:id])
+    #@story_branches = StoryBranch.find(@story_node.id)
+
     render 'view'
   end
 end

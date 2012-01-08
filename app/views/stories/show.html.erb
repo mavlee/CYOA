@@ -1,20 +1,11 @@
 <p>
-  	<b>Title:</b>
-  	<%= @story.title %>
-  	</br>
-  	<b>Content:</b>
-  	<%= @story.description %>
+  <b>Title:</b>
+  <%= @story.title %>
+  </br>
+  <b>Description:</b>
+  <%= @story.description %>
 
-	<%= form_for @story, :url => story_path do |form| %>
-		<%= form.text_area :description, :class => "story_text_area", :placeholder => @story.description %>
-		</br>
-		<%= form.submit "Save" %>
-	<% end %>
-
-	<b>Paths:</b>
-	</br>
-	<%= form_for @storypath do |form| %>
-		<%= form.text_field :title, :class => "frontpage_large_textfield", :placeholder => "Story Name" %>
-		<%= form.submit "Create new path" %>
-	<% end %>
+  <br />
+  <a href="/story_nodes/<%= @story.start_node %>">continue to the story</a>
+  <br />
 </p>
