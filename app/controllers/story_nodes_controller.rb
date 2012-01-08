@@ -10,7 +10,7 @@ class StoryNodesController < ApplicationController
     @story_node.content = params[:story_node][:content]
     @story_node.save
 
-    render 'show'
+    redirect_to :action => :show, :id => @story_node.id
   end
 
   def new
@@ -33,10 +33,8 @@ class StoryNodesController < ApplicationController
   end
 
   def show
-    # A lot of these can be redone
-    # It's 4:30 AM and I can't think of smart schemas
     @story_node = StoryNode.find(params[:id])
-    @story = Story.where(:start_node => @story_node.id)[0]
+    @story = Story.where(:start_node => @story_node.id).first
 
     render 'show'
   end
