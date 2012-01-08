@@ -8,17 +8,11 @@
     <script type="text/javascript">
       window.BranchItOut = {};
     </script>
-
-    <style type="text/css">
-      body {
-        padding-top: 50px;
-      }
-    </style>
   </head>
 
   <body>
 
-    <%= render 'layouts/topbar' %>
+    <!--<%= render 'layouts/topbar' %>-->
 
     <div class="container">
 
@@ -28,13 +22,7 @@
         <% end %>
       </section>
 
-      <div class="content">
-        <section id="grid-system">
-          <div class="row">
-            <%= yield %>
-          </div>
-        </section>
-      </div>
+      <%= yield %>
 
       <%= debug(params) if Rails.env.development? %>
     </div>

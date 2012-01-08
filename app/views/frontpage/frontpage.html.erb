@@ -1,27 +1,42 @@
 <%= render 'templates/story_templates.html' %>
 
-<div id="frontpage" class="span10">
-  <h1>Stories</h1>
-  <a class="submit_button" href="/stories/new">
-    Create Story
-  </a>
-
-  <ul id="story-list-placeholder"></ul>
-
-  <script type="text/javascript">
-    window.BranchItOut.stories = <%= raw @stories.to_json %>;
-  </script>
+<div id="header" class="row">
+  <div class="span4">
+    <%= image_tag("logo.png", :size => "175x100", :alt => "Branch it out") %>
+  </div>
+  <div class="span8">
+    <h2 class="tagLine">Your Path. Your choice.</h2>
+  </div>
+  <div class="span4">
+    <%= form_for @user do |form| %>
+      <%= form.text_field :user_name, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
+      <%= form.submit "Sign up/Login", :class => "frontpage_submit_button" %>
+    <% end %>
+  </div>
 </div>
 
-<div class="span6">
-	<div class="frontpage_right_div">
-		</br>
-		
-		<%= form_for @user do |form| %>
-			<%= form.text_field :user_name, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
-			<%= form.submit "Sign up/Login", :class => "frontpage_submit_button" %>
-		<% end %>
-	</div>
+<div class="row">
+  <div class="offset1">
+    <h2 class="headingLine">Read a Story</h1>
+  </div>
 </div>
+
+<div id="frontpage" class="row">
+  <div id="story-list-container" class="span8 offset1">
+    <ul id="story-list-placeholder"></ul>
+  </div>
+
+  <div class="span5 sellingBox">
+    <h1>Is the time write?</h1>
+    <p>Then it's time to...</p>
+    <a class="submit_button" href="/stories/new">
+      Create Story
+    </a>
+  </div>
+</div>
+
+<script type="text/javascript">
+  window.BranchItOut.stories = <%= raw @stories.to_json %>;
+</script>
 
 <%= requirejs_include_tag "home_page" %>

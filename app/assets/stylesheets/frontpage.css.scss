@@ -2,30 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#header {
+  .tagLine {
+    color: #722E00;
+    line-height: 100px;
+    font-weight: normal;
+  }
+
+  .new_user {
+    margin-top: 20px;
+  }
+}
+
 #frontpage {
-  h1 {
-    display: inline-block;
-  }
-
-  .submit_button {
-    display: inline-block;
-    font-size: 20px;
-    line-height: 40px;
-    height: 40px;
-    width: 200px;
-    float: right;
-    text-shadow: -1px 1px 1px #333333;
-    background-color: #6DFF19;
-    text-align: center;
-    -moz-border-radius: 15px;
-    border-radius: 10px;
-    color: white;
-
-    -moz-box-shadow: 2px 2px 2px #888;
-    -webkit-box-shadow: 2px 2px 2px #888;
-    box-shadow: 2px 2px 2px #888;
-  }
-
   #story-list-placeholder {
     li {
       margin: 20px 0;
@@ -33,7 +22,53 @@
     }
 
     .story-title {
+      color: #722E00;
       font-size: 30px;
     }
   }
+
+  #story-list-container, .sellingBox {
+    border: 5px solid #FF9900;
+  }
+
+  .sellingBox {
+    h1 {
+      margin-top: 15px;
+      text-align: center;
+      color: #722E00;
+    }
+
+    p {
+      text-align: center;
+      font-size: 15px;
+      color: #722E00;
+    }
+
+    .submit_button {
+      display: block;
+      font-size: 20px;
+      line-height: 40px;
+      height: 40px;
+      width: 200px;
+      text-shadow: -1px 1px 1px #333333;
+      background-color: #6DFF19;
+      text-align: center;
+      -moz-border-radius: 15px;
+      border-radius: 10px;
+      color: white;
+      margin: 0 auto;
+      margin-bottom: 10px;
+
+      -moz-box-shadow: 2px 2px 2px #888;
+      -webkit-box-shadow: 2px 2px 2px #888;
+      box-shadow: 2px 2px 2px #888;
+    }
+  }
+}
+
+.headingLine {
+  font-size: 36px;
+  font-weight: normal;
+  color: #722E00;
+  margin-bottom: 10px;
 }
