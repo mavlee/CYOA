@@ -4,6 +4,7 @@ class FrontpageController < ApplicationController
     #@user = User.new
     #@sign_up = User.new
     @story = Story.new(params[:story])
+    @story.start_node = StoryNode.new
     @storybranch = StoryBranch.new
 
     respond_to do |format|
@@ -14,8 +15,7 @@ class FrontpageController < ApplicationController
         flash.now[:success] = "Story was successfully created."
         @stories = Story.all
         
-        
-        storybranch(from, to)
+        # storybranch(from, to)
         
         format.html 
         # redirect_to root_path
