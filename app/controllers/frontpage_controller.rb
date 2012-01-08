@@ -4,8 +4,8 @@ class FrontpageController < ApplicationController
     #@user = User.new
     #@sign_up = User.new
     @story = Story.new(params[:story])
-    @story.start_node = StoryNode.new
-    @storybranch = StoryBranch.new
+    #@story.start_node = StoryNode.new
+    #@storybranch = StoryBranch.new
 
     respond_to do |format|
       if @story.title.nil?

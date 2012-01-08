@@ -1,3 +1,3 @@
 class Story < ActiveRecord::Base
-  has_one :storynode
+  #has_one :StoryNode
 end

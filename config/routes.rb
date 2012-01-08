@@ -57,12 +57,12 @@ TwitterClone::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
-  resources :story, controller: "story"
-  resources :story do
+  resources :stories do
     member do
       get 'view'
     end
   end
+  
   resources :storypaths, controller: "storypath"
   resources :users, controller: "user"
   resources :sessions, :only => [:new, 
