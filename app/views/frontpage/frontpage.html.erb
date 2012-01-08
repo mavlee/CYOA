@@ -18,10 +18,12 @@
 		</br>
 		
 		<%= form_for @user do |form| %>
-			<%= form.text_field :user_name, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
+			<%= form.text_field :username, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
 			<%= form.submit "Sign up/Login", :class => "frontpage_submit_button" %>
 		<% end %>
 	</div>
 </div>
+
+<div class="fb-like" data-href="http://www.branchitout.com" data-send="false" data-width="450" data-show-faces="true"></div>
 
 <%= requirejs_include_tag "home_page" %>
