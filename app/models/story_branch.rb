@@ -1,3 +1,3 @@
 class StoryBranch < ActiveRecord::Base
-  #belongs_to :storynode
+  belongs_to :story_node
 end

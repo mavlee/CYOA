@@ -21,31 +21,13 @@ class StoriesController < ApplicationController
   def create
     @story = Story.new(params[:story])
     
-    @storynode = StoryNode.new
-    # @story.storynode = @storynode
-    
-    @story.save
-    
-    #@storynode = StoryNode.new
-    #@story.startNode = @storynode.id
+    @story_node = StoryNode.new
+    @story.start_node = @story_node.id
 
-    #respond_to do |format|
-    #  if @storypath.title.nil?
-    #    @storypaths = Story.all
-        # redirect_to @story
-        
-    #  elsif @storypath.save
-    #    print "hello"
-    #    flash.now[:success] = "Story was successfully created."
-    #    @storypaths = Story.all
-    #    render edit_story_path
-        # redirect_to @story
-        # redirect_to :controller => "frontpage", :action => "frontpage"
-        # format.html {render action: "frontpage/frontpage"}
-    #  else
-    #    format.html {render action: "failure"}
-    #  end
-    #end
+    @story_node.save
+    @story.save
+
+    redirect_to :controller => 'story_nodes', :action => 'edit', :id => @story_node.id
   end
   
   def view

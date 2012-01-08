@@ -1,0 +1,13 @@
+<p>
+  	<b>Title:</b>
+  	<%= @story_node.title %>
+  	</br>
+  	<b>Content:</b>
+  	<%= @story_node.content %>
+
+	<%= form_for @story_node, :url => story_path do |form| %>
+		<%= form.text_area :content, :class => "stories_text_area", :placeholder => @story_node.content %>
+		</br>
+		<%= form.submit "Save" %>
+	<% end %>
+</p>
