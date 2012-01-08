@@ -1,5 +1,3 @@
-<%= render 'layouts/topbar' %>
-
 <p>
   	<b>Title:</b>
   	<%= @story.title %>
@@ -12,7 +10,7 @@
 		</br>
 		<%= form.submit "Save" %>
 	<% end %>
-	
+
 	<b>Paths:</b>
 	</br>
 	<%= form_for @storypath do |form| %>

@@ -21,7 +21,9 @@ define ['underscore', 'backbone', 'story', 'common'], \
       this.collection.bind 'add', this.addOne
       this.collection.bind 'reset', this.addAll
     addOne : (model) ->
-      view = new StoryCompactView { model : model }
+      view = new StoryCompactView
+        model   : model
+        tagName : 'li'
       $(this.el).append view.render().el
     addAll : () ->
       this.collection.each(this.addOne)
