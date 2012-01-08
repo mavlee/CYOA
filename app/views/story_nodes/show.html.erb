@@ -1,0 +1,47 @@
+<p>
+  <% if @story_node.previous_branches.length > 0 %>
+    <%= link_to 'back', :action => :show, :id => @story_node.previous_branches[0].id %>
+  <% elsif @story %>
+    <%= link_to 'back', :controller => :stories, :action => :show, :id => @story.id %>
+  <% else %>
+    FIX WE HAVE A NIL STORY
+  <% end %>
+  <br />
+  <b>Story Title:</b>
+  NOT DONE YET
+  <br />
+  <br />
+
+  <b>Chapter Title:</b>
+  <%= @story_node.title %>
+  <br />
+  <br />
+
+  <%= @story_node.content %>
+  <br />
+  <br />
+
+  <%= link_to "Edit Story", :action => :edit %>
+  <br />
+  <br />
+
+  <b>Branch List</b>
+  <br />
+  <% if @story_node.branches %>
+    <% @story_node.branches.each do |branch| %>
+      <%= link_to branch.title, :action => :show, :id => branch.id %>
+      <br />
+    <% end %>
+  <% end %>
+  <br />
+
+  <%= link_to "New Branch", :action => :new, :options => {'referer' => @story_node.id} %>
+</p>
+
+<script type="text/javascript">
+  window.BranchItOut.storyNode = <%= raw @story_node.to_json %>
+</script>
+
+<%= requirejs_include_tag 'story_node_page' %>
+
+<%= render 'templates/story_node_templates.html' %>

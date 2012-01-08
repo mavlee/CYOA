@@ -7,6 +7,7 @@ define ['underscore', 'backbone', 'story', 'common'], \
   StoryCompactView = Backbone.View.extend
     initialize : (options) ->
       _.bindAll(this)
+      this.model.bind 'change', this.render
       this.template = common.template $('#story-compact-view-tpl').html()
     render : () ->
       $(this.el).html(this.template(this.model.toJSON()))
