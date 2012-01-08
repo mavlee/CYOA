@@ -22,6 +22,9 @@ class StoryNodesController < ApplicationController
     @story_node = StoryNode.new
     @story_node.title = params[:story_node][:title]
     @story_node.content = params[:story_node][:content]
+
+    @prev_story_node = StoryNode.find(params[:story_node][:referer])
+    @story_node.story_id = @prev_story_node.story_id
     @story_node.save
 
     @story_branch = StoryBranch.new

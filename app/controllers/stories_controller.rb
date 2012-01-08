@@ -26,6 +26,8 @@ class StoriesController < ApplicationController
     @story.start_node = @story_node.id
 
     @story.save
+    @story_node.story_id = @story.id
+    @story_node.save
 
     redirect_to :controller => 'story_nodes', :action => 'edit', :id => @story_node.id
   end
