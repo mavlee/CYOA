@@ -1,11 +1,11 @@
 // Place all the styles related to the frontpage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-div.frontpage_right_div {
+.frontpage_right_div {
 	width: 264px
 }
 
-div.frontpage_left_div {
+.frontpage_left_div {
 	width: 385px;
 }
 
@@ -24,3 +24,14 @@ input.frontpage_large_textfield {
 	float: left;
 }
 
+
+#story-list-placeholder {
+  li {
+    margin: 20px 0;
+    list-style: none;
+  }
+
+  .story-title {
+    font-size: 30px;
+  }
+}

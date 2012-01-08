@@ -1,30 +1,17 @@
-<%= render 'layouts/topbar' %>
-
-<%= image_tag("logo.png", :size => "429x244") %>
+<%= render 'templates/story_templates.html' %>
 
 <div class="span10">
 	<div class="frontpage_left_div">
 		<a href="/stories/new"> Create Story </a>
 		</br>
 
-		<% @stories.each do |story| %>
-		  <tr> 
-			<td><%= story.title %></td> <%= link_to "View", "story/" + story.id.to_s + "/view" %> <%= link_to "Edit", story %>
-		  </tr>
-		  </br>
-		<% end %>
+    <h1>Stories</h1>
+    <ul id="story-list-placeholder"></ul>
+
+    <script type="text/javascript">
+      window.BranchItOut.stories = <%= raw @stories.to_json %>;
+    </script>
 	</div>
 </div>
 
-<div class="span6">
-	<div class="frontpage_right_div">
-		</br>
-		<%= form_for(:session, :url => sessions_path) do |form| %>
-			<%= form.text_field :username, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
-			<%= form.text_field :pw, :class => "small", :placeholder => "Password" %>
-			<%= form.submit "Sign in", :class => "frontpage_submit_button" %>
-		<% end %>
-	</div>
-</div>
-
-
+<%= requirejs_include_tag "home_page" %>
