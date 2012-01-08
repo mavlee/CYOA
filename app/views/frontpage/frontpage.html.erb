@@ -4,14 +4,9 @@
 
 <div class="span10">
 	<div class="frontpage_left_div">
-		<%= form_for @story, :url => root_path do |form| %>
-			<%= form.text_field :title, :class => "frontpage_large_textfield", :placeholder => "Story Name" %>
-			<%= form.submit "Create new story", :class => "frontpage_create_new_story_button" %>
-		<% end %>
-		
+		<a href="/story/new"> Create Story </a>
 		</br>
-		</br>
-		
+
 		<% @stories.each do |story| %>
 		  <tr> 
 			<td><%= story.title %></td> <%= link_to "View", "story/" + story.id.to_s + "/view" %> <%= link_to "Edit", story %>

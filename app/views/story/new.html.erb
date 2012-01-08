@@ -1,0 +1,9 @@
+<%= form_for @story do |form| %> 
+	<%= form.text_field :title, :class => "small", :placeholder => "Title", :autocomplete => "on" %>
+	</br>
+	<%= form.text_field :category, :class => "small", :placeholder => "Category" %>
+	</br>
+	<%= form.text_field :description, :class => "small", :placeholder => "Description" %>
+	</br>
+	<%= form.submit "Create Story" %>
+<% end %>

@@ -7,7 +7,14 @@ class StoryController < ApplicationController
       format.json { render :json => @stories }
     end
   end
-
+  
+  def new
+    @story = Story.new
+    respond_to do |format|
+      format.html
+    end
+  end
+  
   def create
     @storypath = Storypath.new(params[:storypath])
 
