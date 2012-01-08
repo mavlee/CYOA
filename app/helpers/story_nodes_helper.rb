@@ -1,0 +1,2 @@
+module StoryNodesHelper
+end
