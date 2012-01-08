@@ -28,7 +28,7 @@ class StoryNodesController < ApplicationController
     @story_node.save
 
     @story_branch = StoryBranch.new
-    @story_branch.from_node_id = params[:story_node][:referer]
+    @story_branch.from_node_id = params[:story_node][:parent]
     @story_branch.to_node_id = @story_node.id
     @story_branch.save
 

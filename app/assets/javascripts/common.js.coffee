@@ -2,8 +2,8 @@ define ['underscore'], (_) ->
   commonInit = ->
     _.templateSettings =
       evaluate    : /\{%(.+?)%\}/g
-      interpolate : /\{\{\=(.+?)\}\}/g,
       escape      : /\{\{(.+?)\}\}/g
+      interpolate : /\{=(.+?)=\}/g
 
   class Route
     constructor : (@baseUrl) ->
@@ -16,7 +16,8 @@ define ['underscore'], (_) ->
     destroy : (id) -> "#{ @baseUrl }/#{ id }"
 
   ROUTES =
-    stories : new Route '/stories'
+    stories     : new Route '/stories'
+    story_nodes : new Route '/story_nodes'
 
   template = (text, context) ->
     extraHelpers =

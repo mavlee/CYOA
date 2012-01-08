@@ -3,6 +3,26 @@
   <h2 class="branch-title">{{ title }}</h2>
 
   <div class="branch-content">
-    {{= _.escape(content).replace('\n', '<br/>' }}
+    {% var temp = _.escape(content).replace(/\n/g, '<br/>') %}
+    {= temp =}
   </div>
+
+  <a class="edit-branch-btn" href="{{ ROUTES['story_nodes'].edit(id) }}">
+    Edit Branch
+  </a>
+
+  <h3 class="title">
+    Branch List
+  </h3>
+
+  {% _.each(branches, function(branch) { %}
+    <a class="branch-link" href="{{ ROUTES['story_nodes'].show(branch.id) }}">
+      {{ branch.title }}
+    </a>
+    <br/>
+  {% }); %}
+
+  <a class="new-branch-btn" href="{{ ROUTES['story_nodes'].new() }}?parent={{ id }}">
+    New branch
+  </a>
 </script>
