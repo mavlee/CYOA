@@ -21,7 +21,7 @@ define ['underscore'], (_) ->
     destroy : (id) -> "#{ @baseUrl }/#{ id }"
 
   ROUTES =
-    stories : new Route '/story'
+    stories : new Route '/stories'
 
   template = (text, context) ->
     extraHelpers =
