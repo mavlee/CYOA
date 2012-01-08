@@ -1,6 +1,5 @@
 class CreateStories < ActiveRecord::Migration
   def change
-    puts "WTF"
     create_table :stories do |t|
       t.string :title
       t.string :description

@@ -4,6 +4,7 @@ class FrontpageController < ApplicationController
     #@user = User.new
     #@sign_up = User.new
     @story = Story.new(params[:story])
+    @storybranch = StoryBranch.new
 
     respond_to do |format|
       if @story.title.nil?
@@ -12,6 +13,10 @@ class FrontpageController < ApplicationController
       elsif @story.save
         flash.now[:success] = "Story was successfully created."
         @stories = Story.all
+        
+        
+        storybranch(from, to)
+        
         format.html 
         # redirect_to root_path
         # redirect_to :controller => "frontpage", :action => "frontpage"
