@@ -3,8 +3,11 @@
   <head>
     <title><%= setTitleBasedOnPage %></title>
     <%= stylesheet_link_tag   "application" %>
-    <%= requirejs_include_tag "application" %>
     <%= csrf_meta_tags %>
+
+    <script type="text/javascript">
+      window.BranchItOut = {};
+    </script>
 
     <style type="text/css">
       body {
