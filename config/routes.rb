@@ -66,7 +66,7 @@ TwitterClone::Application.routes.draw do
   end
   
   resources :storypaths, controller: "storypath"
-  resources :users, controller: "user"
+  resources :users, controller: "users"
   resources :sessions, :only => [:new, 
                                  :create, # url = /sessions, named route = sessions_path, action = create, purpose = create a new session 
                                  :destroy]

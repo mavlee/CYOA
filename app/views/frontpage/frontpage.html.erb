@@ -13,4 +13,15 @@
   </script>
 </div>
 
+<div class="span6">
+	<div class="frontpage_right_div">
+		</br>
+		
+		<%= form_for @user do |form| %>
+			<%= form.text_field :user_name, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
+			<%= form.submit "Sign up/Login", :class => "frontpage_submit_button" %>
+		<% end %>
+	</div>
+</div>
+
 <%= requirejs_include_tag "home_page" %>

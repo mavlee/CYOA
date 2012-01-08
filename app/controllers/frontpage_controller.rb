@@ -1,7 +1,7 @@
 class FrontpageController < ApplicationController
   def frontpage
     @title = "Home"
-    #@user = User.new
+    @user = User.new
     #@sign_up = User.new
     @story = Story.new(params[:story])
     #@story.start_node = StoryNode.new
