@@ -1,22 +1,31 @@
 <p>
-  	<b>Title:</b>
-  	<%= @story_node.title %>
-    <br />
-    <br />
-    
-  	<%= @story_node.content %>
-    <br />
-    <br />
+  <b>Story Title:</b>
+  NOT DONE YET
+  <br />
+  <br />
 
-    <b>Branch List</b>
-    <br />
-    <% if @story_branches %>
-      <% @story_branches.each_with_index do |branch, index| %>
-        <%= link_to @branch_titles[index].title, :action => 'show', :id => branch.to_node %>
-        <br />
-      <% end %>
+  <b>Chapter Title:</b>
+  <%= @story_node.title %>
+  <br />
+  <br />
+  
+  <%= @story_node.content %>
+  <br />
+  <br />
+
+  <%= link_to "Edit Story", :action => :edit %>
+  <br />
+  <br />
+
+  <b>Branch List</b>
+  <br />
+  <% if @story_branches %>
+    <% @story_branches.each_with_index do |branch, index| %>
+      <%= link_to @branch_titles[index].title, :action => :show, :id => branch.to_node %>
+      <br />
     <% end %>
-    <br />
+  <% end %>
+  <br />
 
-    <%= link_to "New Branch", :action => 'new', :options => {'referer' => @story_node.id} %>
+  <%= link_to "New Branch", :action => :new, :options => {'referer' => @story_node.id} %>
 </p>
