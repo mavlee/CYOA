@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120108154019) do
+ActiveRecord::Schema.define(:version => 20120108163121) do
 
   create_table "stories", :force => true do |t|
     t.string   "title"
@@ -30,20 +30,6 @@ ActiveRecord::Schema.define(:version => 20120108154019) do
   end
 
   create_table "story_nodes", :force => true do |t|
-    t.string   "title"
-    t.string   "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "story_paths", :force => true do |t|
-    t.string   "title",      :null => false
-    t.string   "content",    :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "storypaths", :force => true do |t|
     t.string   "title"
     t.string   "content"
     t.datetime "created_at"
