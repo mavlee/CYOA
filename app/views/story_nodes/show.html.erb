@@ -2,12 +2,8 @@
   <% if @story_node.previous_branches.length > 0 %>
     <%= link_to 'back', :action => :show, :id => @story_node.previous_branches[0].id %>
   <% end %>
-  <br />
-  <b>Story Title:</b>
-  <%= @story_node.story.title %>
-  <br />
-  <br />
 
+  <h1 class="story-title"><%= @story_node.story.title %></h1>
 
   <div id="story-node-placeholder"></div>
 </p>
