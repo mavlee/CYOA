@@ -29,7 +29,7 @@ class StoryNodesController < ApplicationController
     @story_branch.to_node = @story_node.id
     @story_branch.save
 
-    render 'view'
+    redirect_to :action => :show, :id => @story_node.id
   end
 
   def show
