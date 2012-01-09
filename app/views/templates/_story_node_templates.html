@@ -17,13 +17,17 @@
     <div class="clear"></div>
 
     <ul class="branch-link-group">
-      {% _.each(branches, function(branch) { %}
-        <li>
-          <a class="branch-link" href="{{ ROUTES['story_nodes'].show(branch.id) }}">
-            {{ branch.title }}
-          </a>
-        </li>
-      {% }); %}
+      {% if (branches.length > 0) { %}
+        {% _.each(branches, function(branch) { %}
+          <li>
+            <a class="branch-link" href="{{ ROUTES['story_nodes'].show(branch.id) }}">
+              {{ branch.title }}
+            </a>
+          </li>
+        {% }); %}
+      {% } else { %}
+        No branches yet =(
+      {% } %}
     </ul>
 
     <a class="btn new-branch-btn" href="{{ ROUTES['story_nodes'].new() }}?parent={{ id }}">
