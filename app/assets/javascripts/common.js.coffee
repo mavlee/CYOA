@@ -21,8 +21,9 @@ define ['underscore'], (_) ->
 
   template = (text, context) ->
     extraHelpers =
-      ROUTES : ROUTES
-      _      : _
+      ROUTES      : ROUTES
+      _           : _
+      currentUser : window.BranchItOut.currentUser
 
     if context?
       return _.template(text, _.extend(extraHelpers, context))

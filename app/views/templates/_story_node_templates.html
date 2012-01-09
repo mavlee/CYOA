@@ -11,7 +11,7 @@
       {= temp =}
     </div>
 
-    {% if (window.BranchItOut.currentUser.id == author.id) { %}
+    {% if (currentUser && currentUser.id == author.id) { %}
       <a class="edit-branch-btn btn" href="{{ ROUTES['story_nodes'].edit(id) }}">
         Edit Text
       </a>
