@@ -1,32 +1,33 @@
 <script id="story-node-tpl" type="text/template">
+  <div class="story-node">
 
-  <h2 class="branch-title">{{ title }}</h2>
+    <div class="branch-header">
+      <h2 class="branch-title">{{ title }}</h2>
+      <span class="author">By: {{ author.username }}</span>
+    </div>
 
-  <div class="branch-content">
-    {% var temp = _.escape(content).replace(/\n/g, '<br/>') %}
-    {= temp =}
-  </div>
+    <div class="branch-content">
+      {% var temp = _.escape(content).replace(/\n/g, '<br/>') %}
+      {= temp =}
+    </div>
 
-  <span class="edit-branch-btn">
-    <a class="btn" href="{{ ROUTES['story_nodes'].edit(id) }}">
+    <a class="edit-branch-btn btn" href="{{ ROUTES['story_nodes'].edit(id) }}">
       Edit Text
     </a>
-  </span>
-  <br />
+    <div class="clear"></div>
 
-  <ul class="branch-link-group">
-    {% _.each(branches, function(branch) { %}
-      <li>
-      <a class="branch-link" href="{{ ROUTES['story_nodes'].show(branch.id) }}">
-        {{ branch.title }}
-      </a>
-      </li>
-    {% }); %}
-  </ul>
+    <ul class="branch-link-group">
+      {% _.each(branches, function(branch) { %}
+        <li>
+          <a class="branch-link" href="{{ ROUTES['story_nodes'].show(branch.id) }}">
+            {{ branch.title }}
+          </a>
+        </li>
+      {% }); %}
+    </ul>
 
-  <span class="new-branch-btn">
-    <a class="btn" href="{{ ROUTES['story_nodes'].new() }}?parent={{ id }}">
+    <a class="btn new-branch-btn" href="{{ ROUTES['story_nodes'].new() }}?parent={{ id }}">
       New Branch
     </a>
-  </span>
+  </div>
 </script>

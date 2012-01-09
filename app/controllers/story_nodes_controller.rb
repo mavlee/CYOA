@@ -27,6 +27,7 @@ class StoryNodesController < ApplicationController
     @story_node.content = params[:story_node][:content]
 
     @story_node.story_id = @prev_story_node.story_id
+    @story_node.author = current_user
     @story_node.save
 
     @story_branch.from_node_id = params[:story_node][:parent]

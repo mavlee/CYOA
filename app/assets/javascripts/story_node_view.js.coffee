@@ -4,7 +4,6 @@ define ['jquery', 'underscore', 'backbone', 'common', 'story_node'], \
   StoryNodeModel = storyNode.StoryNodeModel
 
   StoryNodeView = Backbone.View.extend
-    className : 'story-node'
     initialize : (options) ->
       _.bindAll(this)
       this.model.bind 'change', this.render

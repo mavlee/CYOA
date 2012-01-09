@@ -30,6 +30,7 @@ class StoriesController < ApplicationController
     @story.save
 
     @story_node.story_id = @story.id
+    @story_node.author = current_user
     @story_node.save
 
     redirect_to edit_story_node_path(@story_node)

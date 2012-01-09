@@ -11,6 +11,10 @@
 <script type="text/javascript">
   window.BranchItOut.storyNode = <%= raw @story_node.to_json %>;
   window.BranchItOut.storyNode.branches = <%= raw @story_node.branches.to_json %>;
+  window.BranchItOut.storyNode.author = {
+    id       : <%= raw @story_node.author.id.to_json %>,
+    username : <%= raw @story_node.author.username.to_json %>
+  };
 </script>
 
 </br>
