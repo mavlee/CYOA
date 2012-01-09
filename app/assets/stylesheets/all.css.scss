@@ -1,0 +1,15 @@
+// Place all the styles related to the frontpage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#header {
+  .tagLine {
+    color: #722E00;
+    line-height: 100px;
+    font-weight: normal;
+  }
+
+  .new_user {
+    margin-top: 20px;
+  }
+}

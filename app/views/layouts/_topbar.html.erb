@@ -1,11 +1,17 @@
-<div class="topbar" data-scrollspy="scrollspy">
-	<div class="topbar-inner">
-    <ul class="nav">
-      <li>
-        <a href=<%= root_path %>>
-          <%= image_tag("logo.png", :size => "175x100", :alt => "Branch it out") %>
-        </a>
-      </li>
-    </ul>
-	</div>
+<div id="header" class="row">
+  <div class="span4">
+    <a href=<%= root_path %>>
+      <%= image_tag("logo.png", :size => "175x100", :alt => "Branch it out") %>
+  </a>
+  </div>
+  <div class="span8">
+    <h2 class="tagLine">Your Path. Your choice.</h2>
+  </div>
+  <div class="span4">
+    <% @user = User.new %>
+    <%= form_for @user do |form| %>
+      <%= form.text_field :user_name, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
+      <%= form.submit "Sign up/Login", :class => "frontpage_submit_button" %>
+    <% end %>
+  </div>
 </div>
