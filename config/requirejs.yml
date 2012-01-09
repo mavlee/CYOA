@@ -1,0 +1,3 @@
+modules:
+  - name : 'home_page'
+  - name : 'story_node_page'
