@@ -17,12 +17,28 @@
 
 <%= render 'templates/story_node_templates.html' %>
 
-<<<<<<< HEAD
-<div class="fb-like" data-href="www.google.com" data-send="false" data-width="450" data-show-faces="true"></div>
+</br>
 
+<%= form_for @comment, :method => :post do |form| %>
+	<%= form.text_field :title, :placeholder => "Title" %>
+	</br>
+	<%= form.text_field :comment, :placeholder => "Comment" %>
+	</br>
+	<%= form.submit "Comment" %>
+	
+	<% if !@story_node.nil? %> 
+		<%= form.hidden_field 'story_node_id', :value => @story_node.id %>
+	<% end %>
+<% end %>
+
+<% if !@comments.nil? %>
+	<% @comments.each do |comment| %>
+		<tr>
+		  <td><%= comment.title %> - <%= comment.comment %></td>
+		</tr>
+		</br>
+	<% end %>
+<% end %>
 <!-- 
 <div class="fb-like" data-href=<%= request.url %> data-send="false" data-width="450" data-show-faces="true"></div>
 -->
-=======
-<div class="fb-like" data-href=<%= request.url %> data-send="false" data-width="450" data-show-faces="true"></div>
->>>>>>> e38e6bdf40e4754f7a0aa826efebf460d0f8afa3

@@ -1,4 +1,5 @@
 class StoryNode < ActiveRecord::Base
+  acts_as_commentable
   belongs_to :story
   has_many :story_branches, :class_name => "StoryBranch",
            :foreign_key => :from_node_id

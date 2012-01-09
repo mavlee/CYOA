@@ -49,3 +49,4 @@ group :test do
 end
 
 gem 'devise', '~> 1.4.3'
+gem 'acts_as_commentable'
