@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 
     sign_in user
 
-    redirect_to :controller => :frontpage, :action => :frontpage
+    redirect_back_or :controller => :frontpage, :action => :frontpage
   end
 
   def destroy

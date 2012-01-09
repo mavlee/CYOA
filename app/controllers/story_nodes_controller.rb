@@ -1,7 +1,8 @@
 class StoryNodesController < ApplicationController
+  before_filter :authenticate, :only => [:new, :create]
+
   def edit
     @story_node = StoryNode.find(params[:id])
-    render 'edit'
   end
 
   def update
@@ -10,12 +11,11 @@ class StoryNodesController < ApplicationController
     @story_node.content = params[:story_node][:content]
     @story_node.save
 
-    redirect_to :action => :show, :id => @story_node.id
+    redirect_to @story_node
   end
 
   def new
     @story_node = StoryNode.new
-    render 'new'
   end
 
   def create
@@ -32,13 +32,11 @@ class StoryNodesController < ApplicationController
     @story_branch.to_node_id = @story_node.id
     @story_branch.save
 
-    redirect_to :action => :show, :id => @story_node.id
+    redirect_to @story_node
   end
 
   def show
     @story_node = StoryNode.find(params[:id])
     @story = Story.where(:start_node => @story_node.id).first
-
-    render 'show'
   end
 end

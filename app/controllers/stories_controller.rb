@@ -1,4 +1,6 @@
 class StoriesController < ApplicationController
+  before_filter :authenticate, :only => [:new, :create]
+
   def index
     @stories = Story.all
 
@@ -15,7 +17,7 @@ class StoriesController < ApplicationController
   end
 
   def edit
-    print 'ell'
+    @story = Story.find(params[:story][:id])
   end
 
   def create
@@ -26,19 +28,17 @@ class StoriesController < ApplicationController
     @story.start_node = @story_node.id
 
     @story.save
+
     @story_node.story_id = @story.id
     @story_node.save
 
-    redirect_to :controller => 'story_nodes', :action => 'edit', :id => @story_node.id
+    redirect_to edit_story_node_path(@story_node)
   end
 
   def show
     @story = Story.find(params[:id])
     respond_to do |format|
-      format.html {
-        redirect_to :controller => 'story_nodes', :action => 'show',
-                    :id => @story.start_node
-      }
+      format.html { redirect_to StoryNode.find(@story.start_node) }
       format.json { render :json, @story }
     end
   end
@@ -55,6 +55,5 @@ class StoriesController < ApplicationController
   end
 
   def failure
-
   end
 end
