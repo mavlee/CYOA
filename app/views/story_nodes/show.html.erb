@@ -7,6 +7,38 @@
     <div id="story-node-placeholder"></div>
   </div>
 </div>
+<br />
+<div class="row">
+  <div class="span10 offset4">
+    <% if !@comments.nil? %>
+      <div class="comments-container">
+        <% @comments.each do |comment| %>
+          <div class="comment">
+            <h3><%= comment.user.username %></h3>
+            <p><%= comment.comment %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+    <% if signed_in? %>
+      <h2>Post a comment</h2>
+      <div class="editItemForm">
+        <%= form_for @comment, :method => :post do |form| %>
+          <!--<%= form.text_field :title, :placeholder => "Title" %>
+          </br>-->
+          <%= form.text_area :comment, :placeholder => "Comment" %>
+          </br>
+          <%= form.submit "Post Comment", :class => "btn primary" %>
+          
+          <% if !@story_node.nil? %> 
+            <%= form.hidden_field 'story_node_id', :value => @story_node.id %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 <script type="text/javascript">
   window.BranchItOut.storyNode = <%= raw @story_node.to_json %>;
@@ -16,31 +48,6 @@
     username : <%= raw @story_node.author.username.to_json %>
   };
 </script>
-
-</br>
-
-<% if signed_in? %>
-  <%= form_for @comment, :method => :post do |form| %>
-    <%= form.text_field :title, :placeholder => "Title" %>
-    </br>
-    <%= form.text_field :comment, :placeholder => "Comment" %>
-    </br>
-    <%= form.submit "Comment" %>
-    
-    <% if !@story_node.nil? %> 
-      <%= form.hidden_field 'story_node_id', :value => @story_node.id %>
-    <% end %>
-  <% end %>
-
-  <% if !@comments.nil? %>
-    <% @comments.each do |comment| %>
-      <tr>
-        <td><%= comment.title %> - <%= comment.comment %></td>
-      </tr>
-      </br>
-    <% end %>
-  <% end %>
-<% end %>
 
 <%= requirejs_include_tag 'story_node_page' %>
 

@@ -1,9 +1,12 @@
 <div class="editItemForm">
+  <h1>Create Story</h1>
   <%= form_for @story do |form| %>
-    <%= form.text_field :title, :placeholder => "Title" %>
+    <h2>Story Title</h2>
+    <%= form.text_field :title, :placeholder => "Story Title" %>
     </br>
     <!--<%= form.text_field :category, :placeholder => "Category" %>
     </br>-->
+    <h2>Description</h2>
     <%= form.text_area :description, :placeholder => "Description" %>
     </br>
     <%= form.submit "Create Story", :class => "btn saveButton" %>

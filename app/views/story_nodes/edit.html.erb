@@ -1,7 +1,10 @@
 <div class="editItemForm">
+  <h1>Edit Branch</h1>
   <%= form_for @story_node, :method => :put do |form| %>
-    <%= form.text_field :title, :placeholder => @story_node.title || "Chapter Title" %>
-		<%= form.text_area :content, :class => "stories_text_area", :placeholder => @story_node.content || "Chapter contents" %>
+    <h2>Branch Title</h2>
+    <%= form.text_field :title, :placeholder => @story_node.title || "Branch Title" %>
+    <h2>Branch Content</h2>
+		<%= form.text_area :content, :class => "stories_text_area", :placeholder => @story_node.content || "Branch Content" %>
 		</br>
     <%= form.submit "Save", :class => "btn saveButton" %>
 	<% end %>
