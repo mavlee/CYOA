@@ -15,25 +15,27 @@
 
 </br>
 
-<%= form_for @comment, :method => :post do |form| %>
-	<%= form.text_field :title, :placeholder => "Title" %>
-	</br>
-	<%= form.text_field :comment, :placeholder => "Comment" %>
-	</br>
-	<%= form.submit "Comment" %>
-	
-	<% if !@story_node.nil? %> 
-		<%= form.hidden_field 'story_node_id', :value => @story_node.id %>
-	<% end %>
-<% end %>
+<% if signed_in? %>
+  <%= form_for @comment, :method => :post do |form| %>
+    <%= form.text_field :title, :placeholder => "Title" %>
+    </br>
+    <%= form.text_field :comment, :placeholder => "Comment" %>
+    </br>
+    <%= form.submit "Comment" %>
+    
+    <% if !@story_node.nil? %> 
+      <%= form.hidden_field 'story_node_id', :value => @story_node.id %>
+    <% end %>
+  <% end %>
 
-<% if !@comments.nil? %>
-	<% @comments.each do |comment| %>
-		<tr>
-		  <td><%= comment.title %> - <%= comment.comment %></td>
-		</tr>
-		</br>
-	<% end %>
+  <% if !@comments.nil? %>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.title %> - <%= comment.comment %></td>
+      </tr>
+      </br>
+    <% end %>
+  <% end %>
 <% end %>
 
 <%= requirejs_include_tag 'story_node_page' %>

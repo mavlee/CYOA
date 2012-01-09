@@ -12,5 +12,7 @@ class CommentsController < ApplicationController
     @story_node.comments << @comment
     
     @comments = Comment.all
+
+    redirect_to @story_node
   end
 end
