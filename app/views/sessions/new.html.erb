@@ -1,4 +1,12 @@
-<%= form_for(:sessions, :url => sessions_path) do |form| %>
-  <%= form.text_field :username, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
-  <%= form.submit "Sign up/Login", :class => "frontpage_submit_button" %>
-<% end %>
+<div class="row">
+  <div class="span8 offset4">
+    <div class="loginForm">
+      <%= form_for(:sessions, :url => sessions_path) do |form| %>
+        <div>Username</div>
+        <%= form.text_field :username, :placeholder => "Username", :autocomplete => "on" %>
+        <br />
+        <%= form.submit "Sign up/Login", :class => "btn primary loginButton" %>
+      <% end %>
+    </div>
+  </div>
+</div>

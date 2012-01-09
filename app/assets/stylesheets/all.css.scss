@@ -22,6 +22,29 @@
   }
 }
 
+.loginForm {
+  input, textarea, textfield {
+    margin: 5px auto;
+    width: 100%;
+    height: 50px;
+    color: black;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  div {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  .loginButton {
+    font-size: 14px;
+    height: 28px;
+    line-height: normal;
+  }
+}
+
 .loginButton {
   float:right;
 }
