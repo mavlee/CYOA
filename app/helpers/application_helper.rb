@@ -1,11 +1,11 @@
 module ApplicationHelper
   def setTitleBasedOnPage
-    base_title = "CYOA"
-    
+    base_title = "Branch It Out"
+
     if @title.nil?
       base_title
     else
-        "#{base_title} | #{@title}"
+        "#{ @title } | #{ base_title }"
     end
   end
 end
