@@ -13,10 +13,6 @@
   window.BranchItOut.storyNode.branches = <%= raw @story_node.branches.to_json %>;
 </script>
 
-<%= requirejs_include_tag 'story_node_page' %>
-
-<%= render 'templates/story_node_templates.html' %>
-
 </br>
 
 <%= form_for @comment, :method => :post do |form| %>
@@ -39,6 +35,11 @@
 		</br>
 	<% end %>
 <% end %>
+
+<%= requirejs_include_tag 'story_node_page' %>
+
+<%= render 'templates/story_node_templates.html' %>
+
 <!-- 
 <div class="fb-like" data-href=<%= request.url %> data-send="false" data-width="450" data-show-faces="true"></div>
 -->

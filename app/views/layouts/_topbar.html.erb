@@ -4,22 +4,22 @@
       <%= image_tag("logo.png", :size => "175x100", :alt => "Branch it out") %>
     </a>
   </div>
-  <div class="span8">
+  <div class="span5">
     <h2 class="tagLine">Your Path. Your choice.</h2>
   </div>
-  <div class="span4">
+  <div class="span7">
     <% if signed_in? %>
       <div class="user-status-container">
         <span>
           <a class="btn primary loginButton" href="<%= sign_out_path %>">Logout</a>
-          Welcome <strong><%= current_user.username %></strong>
+          <span class="welcomeLine">Welcome <strong><%= current_user.username %></strong></span>
         </span>
       </div>
     <% else %>
       <div class="user-status-container">
         <span>
           <a class="btn primary loginButton" href="<%= sign_in_path %>">Login</a>
-          Welcome <strong>Guest</strong>
+          <span class="welcomeLine">Welcome <strong>Guest</strong></span>
         </span>
       </div>
     <% end %>
