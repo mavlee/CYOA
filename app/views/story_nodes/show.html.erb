@@ -23,14 +23,14 @@
 
     <% if signed_in? %>
       <h2>Post a comment</h2>
-      <div class="editItemForm">
+      <div class="commentForm">
         <%= form_for @comment, :method => :post do |form| %>
           <!--<%= form.text_field :title, :placeholder => "Title" %>
           </br>-->
           <%= form.text_area :comment, :placeholder => "Comment" %>
           </br>
-          <%= form.submit "Post Comment", :class => "btn primary" %>
-          
+          <%= form.submit "Post Comment", :class => "btn primary postCommentButton" %>
+
           <% if !@story_node.nil? %> 
             <%= form.hidden_field 'story_node_id', :value => @story_node.id %>
           <% end %>

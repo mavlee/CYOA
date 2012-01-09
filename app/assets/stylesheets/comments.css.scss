@@ -4,8 +4,25 @@
 
 .comments-container {
   border-top: 2px dashed #BBB;
+  padding-top: 5px;
+  margin-top: 5px;
 }
 
 .comments {
 
+}
+
+.commentForm {
+  input, textarea {
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  textarea {
+    height: 70px;
+  }
+
+  .postCommentButton {
+    width: inherit;
+  }
 }
