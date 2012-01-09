@@ -11,12 +11,17 @@
 
     .story-title {
       color: #722E00;
-      font-size: 30px;
+      font-size: 24px;
     }
   }
 
   #story-list-container, .sellingBox {
     border: 5px solid #FF9900;
+
+    ul {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
   }
 
   .sellingBox {
