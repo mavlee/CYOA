@@ -1,6 +1,16 @@
 <script id="story-node-tpl" type="text/template">
   <div class="story-node">
 
+    {% if (parent) { %}
+      <a class="edit-branch-btn btn disabled" href="{{ ROUTES['story_nodes'].show(parent.id) }}">
+        Back
+      </a>
+    {% } else { %}
+      <span style="float: right;">
+        Beginning Of Story
+      </span>
+    {% } %}
+
     <div class="branch-header">
       <h2 class="branch-title">{{ title }}</h2>
       <span>By: <span class="author">{{ author.username }}</span></span>
