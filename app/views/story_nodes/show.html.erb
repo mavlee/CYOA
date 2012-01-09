@@ -1,12 +1,12 @@
-<p>
-  <% if @story_node.previous_branches.length > 0 %>
-    <%= link_to 'back', :action => :show, :id => @story_node.previous_branches[0].id %>
-  <% end %>
+<div class="row">
+  <div class="span3">
+    <h1 class="story-title"><%= @story_node.story.title %></h1>
+  </div>
 
-  <h1 class="story-title"><%= @story_node.story.title %></h1>
-
-  <div id="story-node-placeholder"></div>
-</p>
+  <div class="span10 offset1">
+    <div id="story-node-placeholder"></div>
+  </div>
+</div>
 
 <script type="text/javascript">
   window.BranchItOut.storyNode = <%= raw @story_node.to_json %>;

@@ -7,22 +7,26 @@
     {= temp =}
   </div>
 
-  <a class="edit-branch-btn" href="{{ ROUTES['story_nodes'].edit(id) }}">
-    Edit Branch
-  </a>
-
-  <h3 class="title">
-    Branch List
-  </h3>
-
-  {% _.each(branches, function(branch) { %}
-    <a class="branch-link" href="{{ ROUTES['story_nodes'].show(branch.id) }}">
-      {{ branch.title }}
+  <span class="edit-branch-btn">
+    <a class="btn" href="{{ ROUTES['story_nodes'].edit(id) }}">
+      Edit Text
     </a>
-    <br/>
-  {% }); %}
+  </span>
+  <br />
 
-  <a class="new-branch-btn" href="{{ ROUTES['story_nodes'].new() }}?parent={{ id }}">
-    New branch
-  </a>
+  <ul class="branch-link-group">
+    {% _.each(branches, function(branch) { %}
+      <li>
+      <a class="branch-link" href="{{ ROUTES['story_nodes'].show(branch.id) }}">
+        {{ branch.title }}
+      </a>
+      </li>
+    {% }); %}
+  </ul>
+
+  <span class="new-branch-btn">
+    <a class="btn" href="{{ ROUTES['story_nodes'].new() }}?parent={{ id }}">
+      New Branch
+    </a>
+  </span>
 </script>
