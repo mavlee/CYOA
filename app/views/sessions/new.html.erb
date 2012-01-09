@@ -1,2 +1,4 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<%= form_for(:sessions, :url => sessions_path) do |form| %>
+  <%= form.text_field :username, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
+  <%= form.submit "Sign up/Login", :class => "frontpage_submit_button" %>
+<% end %>

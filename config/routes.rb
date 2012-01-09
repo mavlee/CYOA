@@ -58,29 +58,25 @@ TwitterClone::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
   resources :story_nodes
-  
+
   resources :stories do
     member do
       get 'view'
     end
   end
-  
+
   resources :storypaths, controller: "storypath"
   resources :users, controller: "users"
-  resources :sessions, :only => [:new, 
-                                 :create, # url = /sessions, named route = sessions_path, action = create, purpose = create a new session 
+  resources :sessions, :only => [:new,
+                                 :create,
                                  :destroy]
-  
+
   root :to => "frontpage#frontpage"
-  match "frontpage" => "frontpage#frontpage"
-  
+
   match "sign_up" => "users#sign_up"
   match "sign_in" => "sessions#new"
   match "sign_out" => "sessions#destroy"
-  
-  match "show" => "users#show"
-  match "show_all" => "users#show_all"
-  match "dashboard" => "users#dashboard"
+
   match "home" => "users#home"
   match "user_create" => "users#create"
 end

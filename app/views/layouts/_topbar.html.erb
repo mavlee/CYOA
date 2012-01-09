@@ -1,18 +1,19 @@
+<<<<<<< HEAD
 <div id="header" class="row">
   <div class="span4">
     <a href=<%= root_path %>>
       <%= image_tag("logo.png", :size => "175x100", :alt => "Branch it out") %>
-  </a>
+    </a>
   </div>
   <div class="span8">
     <h2 class="tagLine">Your Path. Your choice.</h2>
   </div>
   <div class="span4">
-    <!-- TODO: ALWAYS GET USER -->
-    <% @user = User.new %>
-    <%= form_for @user do |form| %>
-      <%= form.text_field :user_name, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
-      <%= form.submit "Sign up/Login", :class => "frontpage_submit_button" %>
+    <% if signed_in? %>
+      <a href="<%= sign_out_path %>">Logout</a>
+      <%= current_user.username %>
+    <% else %>
+      <a href="<%= sign_in_path %>">Login</a>
     <% end %>
   </div>
 </div>
