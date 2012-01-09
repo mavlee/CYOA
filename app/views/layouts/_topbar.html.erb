@@ -8,6 +8,7 @@
     <h2 class="tagLine">Your Path. Your choice.</h2>
   </div>
   <div class="span4">
+    <!-- TODO: ALWAYS GET USER -->
     <% @user = User.new %>
     <%= form_for @user do |form| %>
       <%= form.text_field :user_name, :class => "small", :placeholder => "Username", :autocomplete => "on" %>
