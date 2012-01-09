@@ -27,11 +27,14 @@
         <%= form_for @comment, :method => :post do |form| %>
           <!--<%= form.text_field :title, :placeholder => "Title" %>
           </br>-->
+
           <%= form.text_area :comment, :placeholder => "Comment" %>
+
           </br>
+
           <%= form.submit "Post Comment", :class => "btn primary postCommentButton" %>
 
-          <% if !@story_node.nil? %> 
+          <% if !@story_node.nil? %>
             <%= form.hidden_field 'story_node_id', :value => @story_node.id %>
           <% end %>
         <% end %>
@@ -53,6 +56,6 @@
 
 <%= render 'templates/story_node_templates.html' %>
 
-<!-- 
+<!--
 <div class="fb-like" data-href=<%= request.url %> data-send="false" data-width="450" data-show-faces="true"></div>
 -->

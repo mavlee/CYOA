@@ -11,10 +11,12 @@
       {= temp =}
     </div>
 
-    <a class="edit-branch-btn btn" href="{{ ROUTES['story_nodes'].edit(id) }}">
-      Edit Text
-    </a>
-    <div class="clear"></div>
+    {% if (window.BranchItOut.currentUser.id == author.id) { %}
+      <a class="edit-branch-btn btn" href="{{ ROUTES['story_nodes'].edit(id) }}">
+        Edit Text
+      </a>
+      <div class="clear"></div>
+    {% } %}
 
     <ul class="branch-link-group">
       {% if (branches.length > 0) { %}

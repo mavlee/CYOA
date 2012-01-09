@@ -31,7 +31,7 @@ module SessionsHelper
   end
 
   def current_user?(user)
-    user == current_user
+    !current_user.nil? && user == current_user
   end
 
   def deny_access

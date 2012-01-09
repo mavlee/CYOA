@@ -7,7 +7,9 @@
     <%= csrf_meta_tags %>
 
     <script type="text/javascript">
-      window.BranchItOut = {};
+      window.BranchItOut = {
+        currentUser : <%= raw current_user.to_json %>
+      };
     </script>
   </head>
 

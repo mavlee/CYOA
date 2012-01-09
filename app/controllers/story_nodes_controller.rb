@@ -1,5 +1,6 @@
 class StoryNodesController < ApplicationController
   before_filter :authenticate, :only => [:new, :create]
+  before_filter :correct_user, :only => [:edit, :update]
 
   def edit
     @story_node = StoryNode.find(params[:id])
@@ -22,7 +23,7 @@ class StoryNodesController < ApplicationController
     @story_node = StoryNode.new
     @story_branch = StoryBranch.new
     @prev_story_node = StoryNode.find(params[:story_node][:parent])
-    
+
     @story_node.title = params[:story_node][:title]
     @story_node.content = params[:story_node][:content]
 
@@ -33,7 +34,7 @@ class StoryNodesController < ApplicationController
     @story_branch.from_node_id = params[:story_node][:parent]
     @story_branch.to_node_id = @story_node.id
     @story_branch.save
-    
+
     redirect_to @story_node
   end
 
@@ -43,4 +44,10 @@ class StoryNodesController < ApplicationController
     @comment = Comment.new
     @comments = @story_node.comments.all
   end
+
+  private
+    def correct_user
+      author = StoryNode.find(params[:id]).author
+      redirect_to(root_path) unless current_user?(author)
+    end
 end
