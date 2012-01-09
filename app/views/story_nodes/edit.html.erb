@@ -1,14 +1,8 @@
-<p>
-  	<b>Title:</b>
-  	<%= @story_node.title %>
-  	</br>
-  	<b>Content:</b>
-  	<%= @story_node.content %>
-
+<div class="editItemForm">
   <%= form_for @story_node, :method => :put do |form| %>
     <%= form.text_field :title, :placeholder => @story_node.title || "Chapter Title" %>
 		<%= form.text_area :content, :class => "stories_text_area", :placeholder => @story_node.content || "Chapter contents" %>
 		</br>
 		<%= form.submit "Save" %>
 	<% end %>
-</p>
+</div>
