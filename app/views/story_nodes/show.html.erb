@@ -1,12 +1,12 @@
-<p>
-  <% if @story_node.previous_branches.length > 0 %>
-    <%= link_to 'back', :action => :show, :id => @story_node.previous_branches[0].id %>
-  <% end %>
+<div class="row">
+  <div class="span3">
+    <h1 class="story-title"><%= @story_node.story.title %></h1>
+  </div>
 
-  <h1 class="story-title"><%= @story_node.story.title %></h1>
-
-  <div id="story-node-placeholder"></div>
-</p>
+  <div class="span10 offset1">
+    <div id="story-node-placeholder"></div>
+  </div>
+</div>
 
 <script type="text/javascript">
   window.BranchItOut.storyNode = <%= raw @story_node.to_json %>;
@@ -17,8 +17,12 @@
 
 <%= render 'templates/story_node_templates.html' %>
 
+<<<<<<< HEAD
 <div class="fb-like" data-href="www.google.com" data-send="false" data-width="450" data-show-faces="true"></div>
 
 <!-- 
 <div class="fb-like" data-href=<%= request.url %> data-send="false" data-width="450" data-show-faces="true"></div>
 -->
+=======
+<div class="fb-like" data-href=<%= request.url %> data-send="false" data-width="450" data-show-faces="true"></div>
+>>>>>>> e38e6bdf40e4754f7a0aa826efebf460d0f8afa3

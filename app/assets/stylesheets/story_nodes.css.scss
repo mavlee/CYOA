@@ -5,19 +5,36 @@
 .story-title {
   font-size: 30px;
   text-align: right;
+  font-weight: normal;
 }
 
 .branch-title {
   font-size: 20px;
+  font-weight: normal;
+}
+
+.branch-link {
+  text-decoration: underline;
 }
 
 .branch-content {
+  margin-bottom: 10px;
+}
+
+.branch-link-group > li {
+  list-style-type: none;
 }
 
 .title {
   font-weight: bold;
 }
 
-.btn {
+.edit-branch-btn {
+  float: right;
+  margin-bottom: 15px;
+}
 
+
+.new-branch-btn {
+  float: left;
 }

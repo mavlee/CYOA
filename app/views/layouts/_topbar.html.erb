@@ -9,10 +9,19 @@
   </div>
   <div class="span4">
     <% if signed_in? %>
-      <a href="<%= sign_out_path %>">Logout</a>
-      <%= current_user.username %>
+      <div class="user-status-container">
+        <span>
+          <a class="btn primary loginButton" href="<%= sign_out_path %>">Logout</a>
+          Welcome <strong><%= current_user.username %></strong>
+        </span>
+      </div>
     <% else %>
-      <a href="<%= sign_in_path %>">Login</a>
+      <div class="user-status-container">
+        <span>
+          <a class="btn primary loginButton" href="<%= sign_in_path %>">Login</a>
+          Welcome <strong>Guest</strong>
+        </span>
+      </div>
     <% end %>
   </div>
 </div>
