@@ -3,6 +3,6 @@
     <%= form.text_field :title, :placeholder => @story_node.title || "Chapter Title" %>
 		<%= form.text_area :content, :class => "stories_text_area", :placeholder => @story_node.content || "Chapter contents" %>
 		</br>
-		<%= form.submit "Save" %>
+    <%= form.submit "Save", :class => "btn saveButton" %>
 	<% end %>
 </div>

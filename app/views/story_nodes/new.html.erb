@@ -4,6 +4,6 @@
 		<%= form.text_area :content, :class => "stories_text_area", :placeholder => "Chapter contents" %>
     <%= form.hidden_field :parent, :value => params[:parent] %>
 		</br>
-		<%= form.submit "Save" %>
+    <%= form.submit "Save", :class => "btn saveButton" %>
 	<% end %>
 </div>

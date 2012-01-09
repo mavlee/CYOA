@@ -8,6 +8,6 @@
 	<%= form_for @story, :url => story_path do |form| %>
 		<%= form.text_area :content, :class => "stories_text_area", :placeholder => @story.content %>
 		</br>
-		<%= form.submit "Save" %>
+    <%= form.submit "Save", :class => "btn saveButton" %>
 	<% end %>
 </p>
