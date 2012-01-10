@@ -1,11 +1,30 @@
-<div class="editItemForm">
-  <h1>Edit Branch</h1>
-  <%= form_for @story_node, :method => :put do |form| %>
-    <h2>Branch Title</h2>
-    <%= form.text_field :title, :placeholder => @story_node.title || "Branch Title" %>
-    <h2>Branch Content</h2>
-		<%= form.text_area :content, :class => "stories_text_area", :placeholder => @story_node.content || "Branch Content" %>
-		</br>
-    <%= form.submit "Save", :class => "btn saveButton" %>
-	<% end %>
+<div class="editItemForm row">
+  <div class="row">
+    <div class="span6 offset2">
+      <h1>Edit a Story</h1>
+    </div>
+  </div>
+  <div class="row">
+    <%= form_for @story_node, :method => :put do |form| %>
+      <div class="row">
+        <div class="offset2 span14">
+          <label for="title">Branch Title</label>
+          <div class="input">
+            <%= form.text_field :title, :placeholder => @story_node.title || "Branch Title", :class => "span10 mainField" %>
+          </div>
+          <div class="clearfix"></div>
+          <label for="content">Branch Content</label>
+          <div class="input">
+		        <%= form.text_area :content, :class => "stories_text_area", :placeholder => @story_node.content || "Branch Content", :class => "span10 offset2 contentField" %>
+          </div>
+          <div class="clearfix"></div>
+          <div class="row">
+            <div class="span4 offset2">
+              <%= form.submit "Save", :class => "btn saveButton" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
